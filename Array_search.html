@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Search</title>
+    <script>
+    //   let data = [10, 20, 30, 40, 50, 60, 70];
+    //   let item = 70;
+    //   index = undefined;
+
+    //   for (i = 0; i < item.lengta - 1; i++) {
+    //     if (data[i] === item) {
+    //       index = i;
+    //       break;
+    //     }
+    //   }
+    //   console.warn(index);
+    //   console.warn(data.indexOf(item));
+    //   data.splice(2, 1); //to delete
+    //   console.warn(data);
+
+      function searchElement() {
+        let data = [10, 20, 30, 40, 50, 60, 70];
+        let item = document.getElementById('searchEl').value;
+        let index = undefined;
+
+        for (i = 0; i <=data.length - 1; i++) {
+          if (data[i] === parseInt(item)) {
+            index = i;
+            break;
+          }
+        }
+        console.warn(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Eneter value" id="searchEl" />
+    <button onclick="searchElement()">Search element</button>
+  </body>
+</html>
