@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+        function push() {
+            let newVal = document.getElementById("newEl").value;
+            if (currentSize >= max) {
+                alert("Stack is full you cannot add" + newVal)
+            }else{
+                data[currentSize] = newVal;
+                currentSize += 1
+                document.getElementById("newEl").value="";
+                console.log("Element added")
+            }
+            
+        }
+
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                data.length = currentSize;
+            } else {
+                alert("Stack is already Empty")
+            }
+            console.log("Element revoked")
+        }
+
+        function display() {
+            for(let i = 0; i<=currentSize-1; i++)(
+                console.log("Element no.",i, "and value is",data[i])
+            )
+        }
+
+    </script>
+</head>
+
+<body style="background-color: black;">
+    <h1 style="color: white;">Stack in javaScript</h1>
+    <input style="width: 180px; height: 35px;" type="text" placeholder="Input stack value" id="newEl">
+    <button onclick="push()" style="background-color: teal; color: white; width: 180px; height: 40px; cursor: pointer;">Add element to 
+        stack</button>
+    <button onclick="pop()"
+        style="background-color: teal; color: white; width: 180px; height: 40px; cursor: pointer;">Remove element to
+        stack</button>
+    <button onclick="display()" style="background-color: teal; color: white; width: 180px; height: 40px; cursor: pointer;">Display all
+        element of stake</button>
+</body>
+
+</html>
